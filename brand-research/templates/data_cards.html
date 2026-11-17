@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;font-family:"Segoe UI","Leelawadee UI",sans-serif;background:#fff}
+.c{width:1300px;padding:28px 34px;box-sizing:border-box;color:#1d1d1f}
+h2{margin:0 0 4px;font-size:30px}.s{color:#888;font-size:16px;margin-bottom:18px}
+.g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.b{background:#f4f3fb;border-radius:12px;padding:16px 18px;font-size:17px;line-height:1.5}
+.b h3{margin:0 0 6px;font-size:18px;color:#5b4fd6}
+.big{font-size:44px;font-weight:700;line-height:1}
+.r{display:flex;align-items:center;gap:8px;margin:5px 0}.r span:first-child{width:90px}
+.bar{height:16px;background:#7b6cf0;border-radius:4px}
+ol{margin:0;padding-left:22px}
+</style></head><body>
+<!-- One card per brand. Copy the block, give it a new id, fill the {{…}} fields.
+     Bar width = share % × 2 px. Render with Playwright: page.locator('#brand1').screenshot(path=...) -->
+<div class="c" id="brand1">
+<h2>{{BRAND}} · Data</h2><div class="s">Similarweb ({{MONTH}}) · Shopify {{DOMAIN}} · Meta Ad Library {{DATE}}</div>
+<div class="g">
+<div class="b"><h3>Traffic</h3><div class="big">{{VISITS}}</div>visits / month<br>Bounce {{BOUNCE}} · {{PAGES}} pages · {{DURATION}}</div>
+<div class="b"><h3>Countries</h3>
+<div class="r"><span>{{COUNTRY1}}</span><i class="bar" style="width:{{BAR1}}px"></i>{{SHARE1}}</div>
+<div class="r"><span>{{COUNTRY2}}</span><i class="bar" style="width:{{BAR2}}px"></i>{{SHARE2}}</div>
+<div class="r"><span>{{COUNTRY3}}</span><i class="bar" style="width:{{BAR3}}px"></i>{{SHARE3}}</div></div>
+<div class="b"><h3>Channels</h3>1. {{CHANNEL1}}<br>2. {{CHANNEL2}}<br>3. {{CHANNEL3}}</div>
+<div class="b"><h3>Store</h3>Since {{STORE_START}} · {{ITEMS}} items<br>{{PRICE_RANGE}} · median {{MEDIAN}}<br>{{SOLD_OUT}} sold out · {{THEME_PIXELS}}</div>
+<div class="b"><h3>Top 5 best-sellers</h3><ol><li>{{BEST1}}</li><li>{{BEST2}}</li><li>{{BEST3}}</li><li>{{BEST4}}</li><li>{{BEST5}}</li></ol></div>
+<div class="b"><h3>Social</h3>IG {{IG}} · TikTok {{TT}}<br>FB {{FB}} (page since {{PAGE_SINCE}})<br>{{ADS}} active FB ads · "{{CTA}}"</div>
+</div></div>
+</body></html>
